@@ -7,7 +7,7 @@ function App() {
   const [iq, setIq] = useState("");
   const [result, setResult] = useState("");
   const [confidence, setConfidence] = useState("");
-  const [loading, setLoading] = useState(false);
+
 
   const predict = async () => {
 
@@ -58,7 +58,7 @@ function App() {
 
     <button onClick={predict}>
       {
-        loading ? "Predicting..." : "Predict"
+        "Predict"
       }
     </button>
 
@@ -76,19 +76,11 @@ result==="Placed"
           {result}
         </h2>
 
-        <p>
-          Confidence:
-          <b>{confidence}%</b>
-        </p>
+       
 
-          <div className="progress">
+          <div>
 
-    <div 
-      className="bar"
-      style={{width:`${confidence}%`}}
-    >
-
-    </div>
+    
 
   </div>
 
